@@ -1,0 +1,20 @@
+Status: Resolved
+
+Summary: Customer data was not sent
+
+Impact: 486,000 records not sent
+
+Root Cause: An outage with AES CIS service was logged (JIRA AESCIS-38263). EDI to CIS monitoring service was also affected by the outage which caused some records to be stalled, and miss its scheduled run.
+
+Resolution: File has been processed again
+
+Detection: JIRA AESEDI-53447 has been logged
+
+Timeline:
+-	AES CIS service outage has been logged (AESCIS-38263)
+-	EDI to CIS monitoring service outage from the CIS side has been logged
+-	AESEDI-53447 has been created
+-	Investigation was conducted
+-	Missing records has been discovered at 11:56 AM. The investigation showed that the file with the data was sent, but it did not get processed due to an issue with the AES CIS service
+-	File has been resent and processed at 1:00 PM.
+-	Issue has been resolved. 
